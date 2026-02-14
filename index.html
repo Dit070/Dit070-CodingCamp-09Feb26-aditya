@@ -1,37 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome To Website</title>
+    <title>My Website</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
 </head>
-
 <body>
-
+    
+    <!-- NAVBAR -->
     <header class="navbar">
         <div class="nav-container">
             <div class="logo">
                 <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Logo">
             </div>
             <nav class="nav-menu">
-                <a href="#home" id="home">Home</a>
-                <a href="#profile" id="profile">Our Profile</a>
-                <a href="#portfolio" id="portofolio">Portofolio</a>
-                <a href="#contact" id="contact">Message Us</a>
+                <a href="#home">Home</a>
+                <a href="#profile">Our Profile</a>
+                <a href="#portfolio">Portofolio</a>
+                <a href="#contact">Message Us</a>
             </nav>
         </div>
     </header>
 
-
-    <section class="hero">
-        <h1>Hi Aditya, Welcome To Website</h1>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <h1>Hi <span id="userName">Harfi</span>, Welcome To Website</h1>
         <p>Ini adalah website latihan pertama</p>
+        <div class="image-placeholder">
+            <p>1366x578</p>
+        </div>
     </section>
 
-</body>
+    <!-- OUR HEADQUARTER SECTION -->
+    <section id="profile" class="headquarter">
+        <h2>Our Headquarter</h2>
+        <div class="hq-grid">
+            <div class="hq-item">
+                <div class="hq-circle"></div>
+                <p>Jakarta</p>
+            </div>
+            <div class="hq-item">
+                <div class="hq-circle"></div>
+                <p>Bandung</p>
+            </div>
+            <div class="hq-item">
+                <div class="hq-circle"></div>
+                <p>Surabaya</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- MESSAGE US FORM -->
+    <section id="contact" class="message-us">
+        <h2>Message Us</h2>
+        <div class="form-container">
+            <form id="contactForm">
+                <div class="form-left">
+                    <div class="form-group">
+                        <label for="name">Nama</label>
+                        <input type="text" id="name" name="name" placeholder="Nama">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birthdate">Tanggal Lahir</label>
+                        <input type="date" id="birthdate" name="birthdate" value="02/04/2023">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Jenis Kelamin</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="gender" value="Laki-Laki" checked> Laki-Laki
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="Perempuan"> Perempuan
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Pesan</label>
+                        <textarea id="message" name="message" placeholder="Pesan"></textarea>
+                    </div>
+
+                    <button type="submit">Submit</button>
+                </div>
+
+                <div class="form-right">
+                    <div class="output-box">
+                        <p><strong>Current time:</strong> <span id="currentTime">Fri Jun 17 2022 11:27:28 GMT+0100</span></p>
+                        <p><strong>Nama:</strong> <span id="outputName">Harfi Novan</span></p>
+                        <p><strong>Tanggal Lahir:</strong> <span id="outputBirthdate">01/11/1995</span></p>
+                        <p><strong>Jenis Kelamin:</strong> <span id="outputGender">Laki - Laki</span></p>
+                        <p><strong>Pesan:</strong> <span id="outputMessage">I use Linear, Buat Website</span></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Created By RevOU</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
 </html>
